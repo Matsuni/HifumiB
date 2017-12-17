@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 const fs = require("fs");
 
-const TOKEN = "MzkxMzEzMTUwNTA4NzkzODY2.DRW2Sg.xRorqEZpdvzhsAWwgUczR2WL2Y4";
+const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";
 const PREFIX = "!H";
 
 function play(connection, message) {
@@ -18,7 +18,7 @@ function play(connection, message) {
 	});
 }
 
-let points = JSON.parse(fs.readFileSync("./userPoints2.json", "utf8"));
+let points = JSON.parse(fs.readFileSync("./userPoints.json", "utf8"));
 
 
 
@@ -113,7 +113,7 @@ bot.on("message", function(message) {
     userData.level = curLevel;
     message.reply(" W-WITH MY MAGIC I CAN LEVEL YOU UP TO LEVEL "+ curLevel+"! (∩ᗒᗜᗕ)⊃━☆ﾟ.*");
   }
-  fs.writeFile("./userPoints2.json", JSON.stringify(points), (err) => {
+  fs.writeFile("./userPoints.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });
 	switch (command){
