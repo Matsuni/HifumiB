@@ -31,12 +31,12 @@ var Ball = [
 	"P-Please ask again..."
 ];
 var Dice = [
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6"
+	1,
+	2,
+	3,
+	4,
+	5,
+	6
 ];
 var Song = [
 	"*♪ Mankai STEP BY STEP de susume! STEP BY STEP, tobidase!~ ♪* (づ^□^)づ",
