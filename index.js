@@ -204,7 +204,31 @@ bot.on("message", function(message) {
 				message.channel.sendEmbed(embed);
 				break;
 			case "RollDice":
-				message.channel.sendMessage("I-It looks like you got: "+Dice[Math.floor(Math.random() * Dice.length﻿)]);
+				var x = 0;
+				var i = 0;
+				var j = 0;
+				var sumP = 0;
+				var sumH = 0;
+				if(!args[1]) {
+					message.channel.sendMessage("I-In this game both of us will roll a-a dice 3 times... and then... O-OH! And then we sum the numbers and the greatest number wins...! To start type !HRollDice Play... good luck!");
+					return;
+				}
+				if (args[1] == "Play") {
+					while (x < 4){
+					i = Dice[Math.floor(Math.	random() * Dice.length﻿)];
+					message.channel.sendMessage(message.author.toString()+": "+i);
+					j = Dice[Math.floor(Math.	random() * Dice.length﻿)];
+					message.channel.sendMessage("Hifumi: "+j);
+					sumP = sumP + i;
+					sumH = sumH + j;
+					x = x+1;
+					}
+					message.channel.sendMessage(message.author.toString()+"'s total: "+sumP+" points");
+					message.channel.sendMessage("Hifumi's total: "+sumH+" points");
+					if (sumP > sumH) message.channel.sendMessage("Y-You win with "+sumP+" points... congrats!");
+					if (sumP<sumH) message.channel.sendMessage("I win with "+sumH+" points... ye!");
+				}
+				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
 			case "AreYouMyMaster?":
 				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
