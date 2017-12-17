@@ -214,7 +214,7 @@ bot.on("message", function(message) {
 					return;
 				}
 				if (args[1] == "Play") {
-					while (x < 4){
+					while (x < 3){
 					i = Dice[Math.floor(Math.	random() * Dice.length﻿)];
 					message.channel.sendMessage(message.author.toString()+": "+i);
 					j = Dice[Math.floor(Math.	random() * Dice.length﻿)];
