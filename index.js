@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 const fs = require("fs");
 
-const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";
+const TOKEN = "MzkxMzEzMTUwNTA4NzkzODY2.DRW2Sg.xRorqEZpdvzhsAWwgUczR2WL2Y4";
 const PREFIX = "!H";
 
 function play(connection, message) {
@@ -18,7 +18,7 @@ function play(connection, message) {
 	});
 }
 
-let points = JSON.parse(fs.readFileSync("./userPoints.json", "utf8"));
+let points = JSON.parse(fs.readFileSync("./userPoints2.json", "utf8"));
 
 
 
@@ -87,12 +87,15 @@ bot.on("ready", function(message) {
 });
 
 bot.on("message", function(message) {
-		console.log(message.content)
+
 	if (message.author.equals(bot.user)) return;
 	
 	if (!message.content.startsWith(PREFIX)) return;
 	
-	var args = message.content.substring(PREFIX.length﻿).split(" ");
+	let command = message.content.split(" ")[0];
+	command = command.slice(PREFIX.length);
+	
+	let args = message.content.split(" ").slice(1);
 	
 	if (!message.content.startsWith(PREFIX)) return;
 	if (message.author.bot) return; // always ignore bots!
@@ -110,10 +113,10 @@ bot.on("message", function(message) {
     userData.level = curLevel;
     message.reply(" W-WITH MY MAGIC I CAN LEVEL YOU UP TO LEVEL "+ curLevel+"! (∩ᗒᗜᗕ)⊃━☆ﾟ.*");
   }
-  fs.writeFile("./userPoints.json", JSON.stringify(points), (err) => {
+  fs.writeFile("./userPoints2.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });
-	switch (args[0]){
+	switch (command){
 			
 			case "help":
 				message.author.sendMessage("I-I am here to help you!!");
@@ -209,11 +212,11 @@ bot.on("message", function(message) {
 				var j = 0;
 				var sumP = 0;
 				var sumH = 0;
-				if(!args[1]) {
+				if(!args[0]) {
 					message.channel.sendMessage("I-In this game both of us will roll a-a dice 3 times... and then... O-OH! And then we sum the numbers and the greatest number wins...! To start type !HRollDice Play... good luck!");
 					return;
 				}
-				if (args[1] == "Play") {
+				if (args[0] == "Play") {
 					while (x < 3){
 					i = Dice[Math.floor(Math.	random() * Dice.length﻿)];
 					message.channel.sendMessage(message.author.toString()+": "+i);
@@ -240,6 +243,17 @@ bot.on("message", function(message) {
 				else { night = "0";
 				message.channel.sendMessage("Hifumi night mode: off!");}
 				break;
+			case "Poem":
+				message.delete();
+				if(!args[1]) {
+					message.channel.sendMessage("P-Please, send me a poem and I will save it in the chat..!");
+					return;
+				}
+				var embed = new Discord.RichEmbed()
+					.addField("Poem time",args.join(" "))
+					.setColor(132344)
+				message.channel.sendEmbed(embed);
+				break;
 			case "Play":
 				if(!args[1]) {
 					message.channel.sendMessage("I-I need a link... please...!");
@@ -257,7 +271,7 @@ bot.on("message", function(message) {
 				
 				var server = servers[message.guild.id];
 				
-				server.queue.push(args[1]);
+				server.queue.push(args[0]);
 				
 				if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
 					play(connection, message);
