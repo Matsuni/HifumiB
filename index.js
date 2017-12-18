@@ -273,6 +273,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
 				break;
 			case "Delet":
+				message.delete();
 				message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				break;
 			case "Play":
