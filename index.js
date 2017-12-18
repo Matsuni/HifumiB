@@ -263,11 +263,11 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				var vs = [
-					message.author.username,
+					message.author.toString(),
 					args[0]
 				];
 				var embed = new Discord.RichEmbed()
-					.setDescription(message.author.username + " VS. " + args[0])
+					.setDescription(message.author.toString() + " VS. " + args[0])
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
