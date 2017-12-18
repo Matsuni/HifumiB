@@ -231,7 +231,8 @@ bot.on("message", function(message) {
 					message.channel.sendMessage(message.author.toString()+"'s total: "+sumP+" points");
 					message.channel.sendMessage("Hifumi's total: "+sumH+" points");
 					if (sumP > sumH) message.channel.sendMessage("Y-You win with "+sumP+" points... congrats!");
-					if (sumP<sumH) message.channel.sendMessage("I win with "+sumH+" points... ye!");
+					if (sumP<sumH) message.channel.sendMessage("I-I win with "+sumH+" points... ye!");
+					if (sumP ==sumH)message.channel.sendMessage("I-It looks like...I-It's a tie");
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
