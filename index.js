@@ -274,7 +274,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "Delet":
 				message.delete();
-				message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
+				if (args[0] !== message.user) message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
+				else message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				userData.points= userData.points - 1;
 				break;
 			case "Play":
