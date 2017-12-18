@@ -274,9 +274,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "Delet":
 				message.delete();
-				if(!args[0]) message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				if (args[0] == message.guild.member(message.mentions.users.first())) message.channel.send("D-DELETE THIS "+args[0]+"!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				else message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
+				if(!args[0]) message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				userData.points= userData.points - 1;
 				break;
 			case "Play":
