@@ -258,7 +258,7 @@ bot.on("message", function(message) {
 				break;
 			case "Vs":
 				if(!args[0]) {
-					message.channel.sendMessage("P-Please, tell who you wish to fight! ...i don't like fighting...");
+					message.channel.sendMessage("P-Please, tell who you wish to fight! ...i-i don't like fighting...");
 					return;
 				}
 				var vs = [
@@ -269,7 +269,7 @@ bot.on("message", function(message) {
 					.setDescription(message.author.username + " VS. " + args[0])
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
-				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... please stop fighting (ᗒ﹏ᗕ)");
+				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
 				break;
 			case "Play":
 				if(!args[1]) {
