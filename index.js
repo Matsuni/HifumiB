@@ -130,7 +130,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_SendNudes", "NO!!")
 					.addField("H_OmaeWaMouShindeiru", "N-N---")
 					.addField("H_AobaIsTrash", "HOW DARE YOU?!")
-					
+					.addField("H_Delet", "Politely ask someone to delete their message!")
 					.addField("H_Cute", "I'll post a cute image from me! (You need to be lvl 3 to ask for this command!)")
 					.addField("H_DidYouDoIt?", "Just a meme...")
 					.addField("H_8ball", "Only questions that I can answer with Yes or No.")
@@ -271,6 +271,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
+				break;
+			case "Delet":
+				message.channel.send("D-DELETE THIS!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				break;
 			case "Play":
 				if(!args[1]) {
