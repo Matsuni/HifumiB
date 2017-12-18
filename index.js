@@ -272,14 +272,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendEmbed(embed);
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
 				break;
-			case "Delet": //client.users.get("name", "USERNAMEHERE").id;
+			case "Delet":
 				message.delete();
-				var user = "";
 				if (args[0] !== message.user) message.channel.send("D-DELETE THIS ", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
-				else{
-					user = client.users.get("name", args[0]).id;
-					message.channel.send("D-DELETE THIS " + user + "!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
-				}
+				else message.channel.send("D-DELETE THIS "+args[0]+"!", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				userData.points= userData.points - 1;
 				break;
 			case "Play":
