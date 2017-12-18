@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 const fs = require("fs");
 
-const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";
-const PREFIX = "H_";
+const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";//Isto permite que o bot se ligue ao Discord
+const PREFIX = "H_";//Forma de chamar o bot
 
-function play(connection, message) {
+function play(connection, message) {//ignora isto por agora
 	var server = servers[message.guild.id];
 	
 	server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
@@ -18,7 +18,7 @@ function play(connection, message) {
 	});
 }
 
-let points = JSON.parse(fs.readFileSync("./userPoints.json", "utf8"));
+let points = JSON.parse(fs.readFileSync("./userPoints.json", "utf8"));//Aqui chamamos o ficheiro que vamos utilizar para guardar pontos
 
 
 
@@ -86,16 +86,16 @@ bot.on("ready", function(message) {
 
 });
 
-bot.on("message", function(message) {
+bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com o "bot.on", depois usamos a fucntion message para indicar que queremos que o bot envie mensagens 
 
-	if (message.author.equals(bot.user)) return;
+	if (message.author.equals(bot.user)) return;//se quem chamou um bot foi outro bot então ele vai parar.
 	
-	if (!message.content.startsWith(PREFIX)) return;
+	if (!message.content.startsWith(PREFIX)) return;//se a mesnagem não conter o Prefix então ele tambem vai parar
 	
 	let command = message.content.split(" ")[0];
 	command = command.slice(PREFIX.length);
 	
-	let args = message.content.split(" ").slice(1);
+	let args = message.content.split(" ").slice(1);//Basicamente o Prefix ja não vai fazer parte dos args[]. Os args[] são as palavras que existem na mensagem. Com isto em conta sabemos agora que a mensagem só começa depois do Prefix
 	
 	if (!message.content.startsWith(PREFIX)) return;
 	if (message.author.bot) return; // always ignore bots!
@@ -115,13 +115,13 @@ bot.on("message", function(message) {
   }
   fs.writeFile("./userPoints.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
-  });
-	switch (command){
+  });//este é um codigo de pontos que encontrei... "WHO DID THIS"
+	switch (command){//aqui começamos um case que em java é Switch
 			
-			case "Help":
-				message.author.sendMessage("I-I am here to help you!!");
+			case "Help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
+				message.author.sendMessage("I-I am here to help you!!");//message.author.sendMessage = O bot vai enviar uma mensagem privada para o autor da mensagem 
 				var embed = new Discord.RichEmbed()
-					.addField("H_Hi", "I say Hi!")
+					.addField("H_Hi", "I say Hi!")//O addField permite que adicionemos um titulo e descrição ex: add.Field("Titulo","Descrição")
 					.addField("H_Goodnight", "I say Goodnight!")
 					.addField("H_JojoReference", "Random Jojo Reference")
 					.addField("H_Thanks OR H!ThankYou", "You are welcome")
@@ -147,9 +147,9 @@ bot.on("message", function(message) {
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.author.sendEmbed(embed);
-				break;
+				break;//depois de terminar uma função colocamos sempre o break para que este pare
 			case "Hi":
-				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");
+				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
 				break;
 			case "Goodnight":
 				if (night == "1") message.channel.sendMessage("G-Goodnight (~˘▾˘)~");
@@ -169,7 +169,7 @@ bot.on("message", function(message) {
 				break;
 			case "NoticeMe":
 				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage(message.author.toString() + "H-Hello Caster!! (づ^ᗜ^)づ ")
-				else message.channel.sendMessage(message.author.toString() + " H-HI!! H-How are you?!");
+				else message.channel.sendMessage(message.author.toString() + " H-HI!! H-How are you?!");//message.author.toString()= Estamos a fazer uma menção ao autor da mensagem
 				break;
 			case "AobaIsTrash":
 				message.channel.send("F-F-FIGHT ME (ง'̀-'́)ง", {file:﻿"https://i.pinimg.com/564x/4f/e7/57/4fe757295290a601789ceee9f7119dca.jpg"});
@@ -192,7 +192,7 @@ bot.on("message", function(message) {
 				message.channel.send("I-I-I'll p-pay y-y-you...d-don't m-make me do t-this...! (ᗒ﹏ᗕ)", {file:﻿"https://pbs.twimg.com/media/CnMW3h0XYAA2V9D.jpg"});
 				break;
 			case "8ball":
-				if (args[1]) message.channel.sendMessage(Ball[Math.floor(Math.random() * Ball.length﻿)]);
+				if (args[1]) message.channel.sendMessage(Ball[Math.floor(Math.random() * Ball.length﻿)]);//Aqui esta a função do random
 				else message.channel.sendMessage("Y-You need to tell me something with that command");
 				break;
 			case "Sing":
@@ -248,12 +248,12 @@ bot.on("message", function(message) {
 				break;
 			case "Poem":
 				message.delete();
-				if(!args[1]) {
-					message.channel.sendMessage("P-Please, send me a poem and I will save it in the chat..!");
+				if(!args[1]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
+					message.channel.sendMessage("P-Please, send me a poem and I will save it in the chat...!");
 					return;
 				}
 				var embed = new Discord.RichEmbed()
-					.addField("Poem time",args.join(" "))
+					.addField("Poem time",args.join(" "))//Aqui vamos juntar todos os args[] e separalos por um espaço
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				break;
@@ -305,7 +305,7 @@ bot.on("message", function(message) {
 				
 				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
 				break;
-			default:
+			default://isto é se caso nenhum dos cases for ativado
 				userData.points= userData.points - 1;
 				message.channel.sendMessage("I-I'm sorry! I-I DON'T UNDERSTAND!!");
 	}
