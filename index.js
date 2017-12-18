@@ -3,7 +3,7 @@ const YTDL = require("ytdl-core");
 const fs = require("fs");
 
 const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";
-const PREFIX = "!H";
+const PREFIX = "H_";
 
 function play(connection, message) {
 	var server = servers[message.guild.id];
@@ -82,7 +82,7 @@ var servers = {};
 
 bot.on("ready", function(message) {
 	console.log("Ready");
-	bot.user.setGame("!Hhelp for help");
+	bot.user.setGame("H_Help for help");
 
 });
 
@@ -118,31 +118,32 @@ bot.on("message", function(message) {
   });
 	switch (command){
 			
-			case "help":
+			case "Help":
 				message.author.sendMessage("I-I am here to help you!!");
 				var embed = new Discord.RichEmbed()
-					.addField("!HHi", "I say Hi!")
-					.addField("!HGoodnight", "I say Goodnight!")
-					.addField("!HJojoReference", "Random Jojo Reference")
-					.addField("!HThanks OR H!ThankYou", "You are welcome")
-					.addField("!HSorry", "No problem")
-					.addField("!HNoticeMe", "I'll notice you")
-					.addField("!HSendNudes", "NO!!")
-					.addField("!HOmaeWaMouShindeiru", "N-N---")
-					.addField("!HAobaIsTrash", "HOW DARE YOU?!")
+					.addField("H_Hi", "I say Hi!")
+					.addField("H_Goodnight", "I say Goodnight!")
+					.addField("H_JojoReference", "Random Jojo Reference")
+					.addField("H_Thanks OR H!ThankYou", "You are welcome")
+					.addField("H_Sorry", "No problem")
+					.addField("H_NoticeMe", "I'll notice you")
+					.addField("H_SendNudes", "NO!!")
+					.addField("H_OmaeWaMouShindeiru", "N-N---")
+					.addField("H_AobaIsTrash", "HOW DARE YOU?!")
 					
-					.addField("!HCute", "I'll post a cute image from me! (You need to be lvl 3 to ask for this command!)")
-					.addField("!HDidYouDoIt?", "Just a meme...")
-					.addField("!H8ball", "Only questions that I can answer with Yes or No.")
-					.addField("!HSing", "I'll sing a song! (You need to be lvl 2 to ask for this command!) ")
-					.addField("!HRollDice", "Let's play a dice game!")
-					.addField("!HAreYouMyMaster?", "I'll tell you if I accept being your Master!")
-					.addField("!HPoem", "Write a poem and I'll post it in the chat!")
-					.addField("!HMyLevel", "I'll tell your current HifumiLevel and HifumiPoints!")
-					.addField("!HPlay", "Give me the link of a video and the auido from it will play!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("!HSkip", "I'll skip to the next audio!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("!HStop", "I'll stop all audio!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("!HNightMode", "Activate/Deactivate my night mode!")
+					.addField("H_Cute", "I'll post a cute image from me! (You need to be lvl 3 to ask for this command!)")
+					.addField("H_DidYouDoIt?", "Just a meme...")
+					.addField("H_8ball", "Only questions that I can answer with Yes or No.")
+					.addField("H_Sing", "I'll sing a song! (You need to be lvl 2 to ask for this command!) ")
+					.addField("H_RollDice", "Let's play a dice game!")
+					.addField("H_AreYouMyMaster?", "I'll tell you if I accept being your Master!")
+					.addField("H_Poem", "Write a poem and I'll post it in the chat!")
+					.addField("H_Vs", "Please don't fight!")
+					.addField("H_MyLevel", "I'll tell your current HifumiLevel and HifumiPoints!")
+					.addField("H_Play", "Give me the link of a video and the auido from it will play!(It's not fully codded yet, but you can try it if you wish...)")
+					.addField("H_Skip", "I'll skip to the next audio!(It's not fully codded yet, but you can try it if you wish...)")
+					.addField("H_Stop", "I'll stop all audio!(It's not fully codded yet, but you can try it if you wish...)")
+					.addField("H_NightMode", "Activate/Deactivate my night mode!")
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.author.sendEmbed(embed);
@@ -254,6 +255,21 @@ bot.on("message", function(message) {
 					.addField("Poem time",args.join(" "))
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
+				break;
+			case "Vs":
+				if(!args[0]) {
+					message.channel.sendMessage("P-Please, tell who you wish to fight! ...i don't like fighting...");
+					return;
+				}
+				var vs = [
+					message.author.username,
+					args[0]
+				];
+				var embed = new Discord.RichEmbed()
+					.setDescription(message.author.username + "VS." + args[0])
+					.setColor(132344)
+				message.channel.sendEmbed(embed);
+				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... please stop fighting (ᗒ﹏ᗕ)");
 				break;
 			case "Play":
 				if(!args[1]) {
