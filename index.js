@@ -119,6 +119,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 	switch (command){//aqui começamos um case que em java é Switch
 			
 			case "Help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
+				message.delete();
 				message.author.sendMessage("I-I am here to help you!!");//message.author.sendMessage = O bot vai enviar uma mensagem privada para o autor da mensagem 
 				var embed = new Discord.RichEmbed()
 					.addField("H_Hi", "I say Hi!")//O addField permite que adicionemos um titulo e descrição ex: add.Field("Titulo","Descrição")
