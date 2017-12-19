@@ -131,6 +131,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_OmaeWaMouShindeiru", "N-N---")
 					.addField("H_AobaIsTrash", "HOW DARE YOU?!")
 					.addField("H_Delet", "Politely ask someone to delete their message!")
+					.addField("H_Reverse", "Use this when someone tries to roast you!")
 					.addField("H_Cute", "I'll post a cute image from me! (You need to be lvl 3 to ask for this command!)")
 					.addField("H_DidYouDoIt?", "Just a meme...")
 					.addField("H_8ball", "Only questions that I can answer with Yes or No.")
@@ -138,7 +139,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_RollDice", "Let's play a dice game!")
 					.addField("H_AreYouMyMaster?", "I'll tell you if I accept being your Master!")
 					.addField("H_Poem", "Write a poem and I'll post it in the chat!")
-					.addField("H_Vs", "Please don't fight!")
+					.addField("H_Vs", "Please don't fight!")	
 					.addField("H_MyLevel", "I'll tell your current HifumiLevel and HifumiPoints!")
 					.addField("H_Play", "Give me the link of a video and the auido from it will play!(It's not fully codded yet, but you can try it if you wish...)")
 					.addField("H_Skip", "I'll skip to the next audio!(It's not fully codded yet, but you can try it if you wish...)")
@@ -278,6 +279,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (args[0]) message.channel.send("D-DELETE THIS "+args[0], {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				else message.channel.send("D-DELETE THIS !", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				userData.points= userData.points - 1;
+				break;
+			case "Reverse":
+				message.delete();
+				message.channel.send({file:﻿"https://i.imgur.com/DdYo9Lq.jpg"});
 				break;
 			case "Play":
 				if(!args[1]) {
