@@ -131,6 +131,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_SendNudes", "NO!!")
 					.addField("H_OmaeWaMouShindeiru", "N-N---")
 					.addField("H_AobaIsTrash", "HOW DARE YOU?!")
+					.addField("H_Pat", "Give someone a comfy pat!")
 					.addField("H_Delet", "Politely ask someone to delete their message!")
 					.addField("H_Reverse", "Use this when someone tries to roast you!")
 					.addField("H_Cute", "I'll post a cute image from me! (You need to be lvl 3 to ask for this command!)")
@@ -273,6 +274,12 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
+				break;
+			case "Pat": 
+				message.delete();
+				args[0] = message.guild.member(message.mentions.users.first()); 
+				if (args[0]) message.channel.send(args[0] + " gets a comfy pat!", {file:﻿"https://images5.alphacoders.com/837/837553.png"});
+				else message.channel.send("Y-You need to tell me who to pat!");
 				break;
 			case "Delet":
 				message.delete();
