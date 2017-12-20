@@ -94,7 +94,7 @@ bot.on("guildMemberAdd", (member) {
   newUsers[guild.id].set(member.id, member.user);
 
   if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u = u.toString()).join(" ");
+    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
     guild.channels.get(guild.id).send("Welcome our new users! " + userlist);
     newUsers[guild.id].clear();
   }
