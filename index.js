@@ -116,9 +116,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
   fs.writeFile("./userPoints.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });//este é um codigo de pontos que encontrei... "WHO DID THIS"
-	switch (command){//aqui começamos um case que em java é Switch
+	switch (command.toLowerCase()){//aqui começamos um case que em java é Switch
 			
-			case "Help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
+			case "help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
 				message.delete();
 				message.author.sendMessage("I-I am here to help you!!");//message.author.sendMessage = O bot vai enviar uma mensagem privada para o autor da mensagem 
 				var embed = new Discord.RichEmbed()
@@ -151,58 +151,58 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.setThumbnail(message.author.avatarURL)
 				message.author.sendEmbed(embed);
 				break;//depois de terminar uma função colocamos sempre o break para que este pare
-			case "Hi":
+			case "hi":
 				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
 				break;
-			case "Goodnight":
+			case "goodnight":
 				if (night == "1") message.channel.sendMessage("G-Goodnight (~˘▾˘)~");
 				else message.channel.sendMessage( "I-Isn't it a little early for that?");
 				break;
-			case "JojoReference":
+			case "jojoreference":
 				message.channel.sendMessage(jojo[Math.floor(Math.random() * jojo.length﻿)]);
 				break;
-			case "Thanks":
+			case "thanks":
 				message.channel.sendMessage("Y-Y-YOU'RE.. welcome (づ｡◕‿‿◕｡)づ");
 				break;
-			case "ThankYou":
+			case "thankYou":
 				message.channel.sendMessage("Y-Y-YOU'RE.. welcome (づ｡◕‿‿◕｡)づ");
 				break;
-			case "Sorry":
+			case "sorry":
 				message.channel.sendMessage("**W-W-WHY ARE YOU APOGOLIZING!?** I-it's okay...");
 				break;
-			case "NoticeMe":
+			case "noticeme":
 				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage(message.author.toString() + "H-Hello Caster!! (づ^ᗜ^)づ ")
 				else message.channel.sendMessage(message.author.toString() + " H-HI!! H-How are you?!");//message.author.toString()= Estamos a fazer uma menção ao autor da mensagem
 				break;
-			case "AobaIsTrash":
+			case "aobaistrash":
 				message.channel.send("F-F-FIGHT ME (ง'̀-'́)ง", {file:﻿"https://i.pinimg.com/564x/4f/e7/57/4fe757295290a601789ceee9f7119dca.jpg"});
 				userData.points= userData.points - 5;
 				break;
-			case "SendNudes":
+			case "sendnudes":
 				message.channel.sendMessage("***N-N-N-NO!! T-THAT'S LEWD!! O///O ***");
 				break;
-			case "OmaeWaMouShindeiru":
+			case "omaewamoushindeiru":
 				message.channel.sendMessage("...eh...y-you mean---N-***NANI!!***");
 				break;
-			case "DidYouDoIt?":
+			case "didyoudoit?":
 				message.channel.send("Y-You know I had to... d-do it to them...", {file:"https://i.imgur.com/in3rt4J.png"});
 				break;
-			case "Cute":
+			case "cute":
 				if (userData.level > 2) message.channel.send(" ", {file:Cute[Math.floor(Math.random() * Cute.length﻿)]});
 				else message.channel.sendMessage("I-I am sorry... I can't do that right now...");
 				break;
-			case "Smile":
+			case "smile":
 				message.channel.send("I-I-I'll p-pay y-y-you...d-don't m-make me do t-this...! (ᗒ﹏ᗕ)", {file:﻿"https://pbs.twimg.com/media/CnMW3h0XYAA2V9D.jpg"});
 				break;
 			case "8ball":
 				if (args[1]) message.channel.sendMessage(Ball[Math.floor(Math.random() * Ball.length﻿)]);//Aqui esta a função do random
 				else message.channel.sendMessage("Y-You need to tell me something with that command");
 				break;
-			case "Sing":
+			case "sing":
 				if (userData.level > 1) message.channel.sendMessage(Song[Math.floor(Math.random() * Song.length﻿)]);
 				else message.channel.sendMessage("I-I am sorry... I can't do that right now...");
 				break;
-			case "MyLevel":
+			case "mylevel":
 				userData.points= userData.points - 1;
 				var embed = new Discord.RichEmbed()
 					.addField("Level: ", userData.level)
@@ -211,7 +211,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.setThumbnail(message.author.avatarURL)
 				message.channel.sendEmbed(embed);
 				break;
-			case "RollDice":
+			case "rolldice":
 				var x = 0;
 				var i = 0;
 				var j = 0;
@@ -239,17 +239,17 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
-			case "AreYouMyMaster?":
+			case "areyoumymaster?":
 				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
 				else message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
-			case "NightMode":
+			case "nightmode":
 				if (night == 0){ night = "1";
 				message.channel.sendMessage("Hifumi night mode: on!");}
 				else { night = "0";
 				message.channel.sendMessage("Hifumi night mode: off!");}
 				break;
-			case "Poem":
+			case "poem":
 				message.delete();
 				if(!args[1]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
 					message.channel.sendMessage("P-Please, send me a poem and I will save it in the chat...!");
@@ -260,7 +260,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				break;
-			case "Vs":
+			case "vs":
 				if(!args[0]) {
 					message.channel.sendMessage("P-Please, tell who you wish to fight! ...i-i don't like fighting...");
 					return;
@@ -275,7 +275,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendEmbed(embed);
 				message.channel.sendMessage(vs[Math.floor(Math.random() * vs.length﻿)]+" wins! ... Now... p-please stop fighting (ᗒ﹏ᗕ)");
 				break;
-			case "Pat": 
+			case "pat": 
 				message.delete();
 				args[0] = message.guild.member(message.mentions.users.first()); 
 				if (args[0]) message.channel.send(args[0] + " gets a comfy pat!", {file:﻿"https://images5.alphacoders.com/837/837553.png"});
@@ -284,18 +284,18 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					userData.points= userData.points - 1;
 				}	
 				break;
-			case "Delet":
+			case "delet":
 				message.delete();
 				args[0] = message.guild.member(message.mentions.users.first());
 				if (args[0]) message.channel.send("D-DELETE THIS "+args[0], {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				else message.channel.send("D-DELETE THIS !", {file:﻿"https://i.imgur.com/xga6glR.jpg"});
 				userData.points= userData.points - 1;
 				break;
-			case "Reverse":
+			case "reverse":
 				message.delete();
 				message.channel.send({file:﻿"https://i.imgur.com/DdYo9Lq.jpg"});
 				break;
-			case "Play":
+			case "play":
 				if(!args[1]) {
 					message.channel.sendMessage("I-I need a link... please...!");
 					return;
@@ -318,12 +318,12 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					play(connection, message);
 				});
 				break;
-			case "Skip":
+			case "skip":
 				var server = servers[message.guild.id];
 				
 				if (server.dispatcher) server.dispatcher.end();
 				break;
-			case "Stop":
+			case "stop":
 				var server = servers[message.guild.id];
 				
 				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
