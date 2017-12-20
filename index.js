@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 const fs = require("fs");
 
-const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRHNIA.ZKrWcGuhweBmg9fx5UAz4VOFgbU";//Isto permite que o bot se ligue ao Discord
+const TOKEN = "MzkzMTEyMjI3ODQ4MTI2NDc0.DRxB0A.wuHW38qA6ms1gl1uiUln2L26Aj4";//Isto permite que o bot se ligue ao Discord
 const PREFIX = "H_";//Forma de chamar o bot
 
 function play(connection, message) {//ignora isto por agora
