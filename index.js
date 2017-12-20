@@ -89,8 +89,7 @@ bot.on("ready", function(message) {
 bot.on("guildMemberAdd", member => {
     let mem = member.guild;
 
-    if (mem.defaultChannel)
-        mem.defaultChannel.sendMessage(member.user + " welcome to the server!"); 
+    if (mem.defaultChannel) mem.defaultChannel.sendMessage(member.user + " welcome to the server!"); 
     
 });
 
