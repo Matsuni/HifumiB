@@ -86,6 +86,12 @@ bot.on("ready", function(message) {
 
 });
 
+bot.on("guildMemberAdd", (member) => {
+	const guild = member.guild;
+	const defaultChannel = guild.channels.find("377126236675244035");
+	defaultChannel.send(member.id + member.user + " has joined the server!");
+});
+
 bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com o "bot.on", depois usamos a fucntion message para indicar que queremos que o bot envie mensagens 
 
 	if (message.author.equals(bot.user)) return;//se quem chamou um bot foi outro bot então ele vai parar.
