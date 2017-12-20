@@ -5,8 +5,6 @@ const fs = require("fs");
 const TOKEN = "MzkwMTAzMTMyODE1ODg0Mjky.DRxEIA.VB6EbSKDDHw1ju0eATa-Nnr_X8U";//Isto permite que o bot se ligue ao Discord
 const PREFIX = "H_";//Forma de chamar o bot
 
-const newUsers = [];
-
 function play(connection, message) {//ignora isto por agora
 	var server = servers[message.guild.id];
 	
@@ -88,16 +86,12 @@ bot.on("ready", function(message) {
 
 });
 
-bot.on("guildMemberAdd", (member) {
-  const guild = member.guild;
-  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].set(member.id, member.user);
+bot.on("guildMemberAdd", member => {
+    let mem = member.guild;
 
-  if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.get(guild.id).send("Welcome our new users! " + userlist);
-    newUsers[guild.id].clear();
-  }
+    if (mem.defaultChannel)
+        mem.defaultChannel.sendMessage(member.user + " welcome to the server!"); 
+    
 });
 
 bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com o "bot.on", depois usamos a fucntion message para indicar que queremos que o bot envie mensagens 
