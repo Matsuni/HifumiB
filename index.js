@@ -88,7 +88,7 @@ bot.on("ready", function(message) {
 
 bot.on("guildMemberAdd", function(message) {
 	const guild = member.guild;
-	const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
+	const defaultChannel = guild.channels.find("377126236675244035");
 	defaultChannel.send(member.id + member.user + " has joined the server!");
 });
 
