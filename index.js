@@ -86,7 +86,11 @@ bot.on("ready", function(message) {
 
 });
 
-
+bot.on("guildMemberAdd", (member) => {
+	const guild = member.guild;
+	const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
+	defaultChannel.send(member.id + member.user + " has joined the server!");
+});
 
 bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com o "bot.on", depois usamos a fucntion message para indicar que queremos que o bot envie mensagens 
 
