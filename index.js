@@ -87,7 +87,7 @@ bot.on("ready", function(message) {
 });
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('377126236675244035').send('**' + member.user.username + '**, has joined the server!'); 
+    member.guild.channels.get('377126236675244035').send('**' + member.user.username + '** has joined the server!'); 
 });
 
 bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com o "bot.on", depois usamos a fucntion message para indicar que queremos que o bot envie mensagens 
