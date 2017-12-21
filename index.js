@@ -120,6 +120,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
   fs.writeFile("./userPoints.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });//este é um codigo de pontos que encontrei... "WHO DID THIS"
+	
+  if(msg.includes("kill my self")) message.channel.sendMessage(message.author.toString()+" I'M HERE TO HELP YOU!");	
 	switch (command.toLowerCase()){//aqui começamos um case que em java é Switch
 			
 			case "help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
