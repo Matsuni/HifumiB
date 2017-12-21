@@ -86,7 +86,7 @@ bot.on("ready", function(message) {
 
 });
 
-bot.on('guildMemberAdd', member {
+bot.on('guildMemberAdd', member => {
     member.guild.channels.get('377126236675244035').send('**' + member.user.username + '**, has joined the server!'); 
 });
 
