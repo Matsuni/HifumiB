@@ -94,8 +94,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 
 	if (message.author.equals(bot.user)) return;//se quem chamou um bot foi outro bot então ele vai parar.
 	
-	if(msg.includes("killmyself")) message.channel.sendMessage(message.author.toString()+" I'M HERE TO HELP YOU!");
-	
 	if (!message.content.startsWith(PREFIX)) return;//se a mesnagem não conter o Prefix então ele tambem vai parar
 	
 	let command = message.content.split(" ")[0];
