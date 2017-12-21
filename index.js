@@ -87,7 +87,6 @@ bot.on("ready", function(message) {
 });
 
 bot.on('guildMemberAdd', member => {
-	message.delete();
     	member.guild.channels.get('377126236675244035').send('**' + member.user.username + '** has joined the server!'); 
 });
 
