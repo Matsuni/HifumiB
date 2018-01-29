@@ -73,7 +73,8 @@ var Cute = [
 	"https://gs.smuglo.li/file/a925a218a4d4da8e3bd1fb302ab70435c6efed496c9d8537bed4bf910317d517.jpg",
 	"https://78.media.tumblr.com/d16ecc035680f3ab0ce177ab9494f16e/tumblr_okeea93OsP1u77y57o5_1280.png",
 	"https://i.pinimg.com/originals/b4/6c/b9/b46cb9d33af2cd4684effd7c7947e2c0.jpg",
-	"https://hentai.fyi/170918/15.jpg"
+	"https://hentai.fyi/170918/15.jpg",
+	"https://i.imgur.com/FfaVKkg.jpg"
 ];
 var bot = new Discord.Client();
 var night = "0";
