@@ -258,11 +258,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
 				else message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
-			case "nightmode":
-				if (night == 0){ night = "1";
-				message.channel.sendMessage("Hifumi night mode: on!");}
-				else { night = "0";
-				message.channel.sendMessage("Hifumi night mode: off!");}
+			case "areyoumymaster":
+				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
+				else message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
 			case "poem":
 				message.delete();
