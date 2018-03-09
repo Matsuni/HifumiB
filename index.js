@@ -163,6 +163,12 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "hi":
 				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
 				break;
+			case "hello":
+				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
+				break;
+			case "howdy":
+				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
+				break;
 			case "goodnight":
 				if (night == "1") message.channel.sendMessage("G-Goodnight (~˘▾˘)~");
 				else message.channel.sendMessage( "I-Isn't it a little early for that?");
