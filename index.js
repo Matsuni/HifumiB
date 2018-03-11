@@ -186,8 +186,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendMessage("**W-W-WHY ARE YOU APOGOLIZING!?** I-it's okay...");
 				break;
 			case "noticeme":
-				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage(message.author.toString() + "H-Hello Caster!! (づ^ᗜ^)づ ")
-				else message.channel.sendMessage(message.author.toString() + " H-HI!! H-How are you?!");//message.author.toString()= Estamos a fazer uma menção ao autor da mensagem
+				message.channel.sendMessage(message.author.toString() + " H-HI!! H-How are you?!");//message.author.toString()= Estamos a fazer uma menção ao autor da mensagem
 				break;
 			case "aobaistrash":
 				message.channel.send("F-F-FIGHT ME (ง'̀-'́)ง", {file:﻿"https://i.pinimg.com/564x/4f/e7/57/4fe757295290a601789ceee9f7119dca.jpg"});
@@ -255,12 +254,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
 			case "areyoumymaster?":
-				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
-				else message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
+				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
 			case "areyoumymaster":
-				if(message.author.toString() == "<@173548169831907329>") message.channel.sendMessage("W-Well... O-OF COURSE!! (づ^ᗜ^)づ ")
-				else message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
+				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
 			case "poem":
 				message.delete();
