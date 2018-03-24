@@ -96,6 +96,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 
 	if (message.author.equals(bot.user)) return;//se quem chamou um bot foi outro bot então ele vai parar.
 	
+	if(message.content.startsWith("u mom gay")) {
+		message.channel.sendMessage("No u");}
+	
 	if (!message.content.startsWith(PREFIX)) return;//se a mesnagem não conter o Prefix então ele tambem vai parar
 	
 	let command = message.content.split(" ")[0];
