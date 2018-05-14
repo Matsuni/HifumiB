@@ -257,8 +257,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
-			case "areyoumymaster?": 
-			case "areyoumymaster": //funciona como um "OR"
+			case "areyoumymaster?","areyoumymaster": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
 			//case "areyoumymaster":
