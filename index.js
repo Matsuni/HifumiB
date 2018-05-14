@@ -154,6 +154,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_AreYouMyMaster?", "I'll tell you if I accept being your Master!")
 					.addField("H_Poem", "Write a poem and I'll post it in the chat!")
 					.addField("H_Vs", "Please don't fight!")	
+					.addField("H_100", "Play a game!")
 					.addField("H_MyLevel", "I'll tell your current HifumiLevel and HifumiPoints!")
 					.addField("H_Play", "Give me the link of a video and the auido from it will play!(It's not fully codded yet, but you can try it if you wish...)")
 					.addField("H_Skip", "I'll skip to the next audio!(It's not fully codded yet, but you can try it if you wish...)")
@@ -256,12 +257,13 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
-			case "areyoumymaster?":
+			case "areyoumymaster?": 
+			case "areyoumymaster": //funciona como um "OR"
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
-			case "areyoumymaster":
-				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
-				break;
+			//case "areyoumymaster":
+				//message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
+				//break;
 			case "poem":
 				message.delete();
 				if(!args[1]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
