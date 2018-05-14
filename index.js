@@ -263,9 +263,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				} 
 				var player = 1, total = 0;
 				if (args[0] == "Play") {
+					message.channel.sendMessage("O-okay, start!");
 					while (total < 100) {
 						message.channel.sendMessage("It's your turn, Player " + player + "! The current total is "+ total + ".");
-						var n = Number(message.content.toString());
+						var n = Number(message.content);
 						if ((!isNaN(n)) && (n>=1) && (n<=10)) {
 							total = total + n;
 							if (total < 100) {
