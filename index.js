@@ -256,7 +256,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
-			case "100game":
+			/*case "100game":
 				if (!args[0]) {
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
@@ -280,7 +280,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
 					}
 				}
-				break;
+				break;*/
 			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
