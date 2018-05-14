@@ -256,6 +256,30 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
+			case "100game":
+				if (!args[0]) {
+					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
+					return;
+				} 
+				var player = 1, total = 0;
+				if (args[0] == "Play") {
+					while (total < 100) {
+						message.channel.sendMessage("It's your turn, Player " + player + "! The current total is "+ total + ".");
+						var n = Number(message.content.toString());
+						if ((!isNaN(n)) && (n>=1) && (n<=10)) {
+							total = total + n;
+							if (total < 100) {
+								if (player = 2) {player = 1;}
+								else {player = 2;}
+							}	
+						}
+						else {message.channel.sendMessage("T-that's not a valid number!");}
+					}
+					if (total >= 100) {
+						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
+					}
+				}
+				break;
 			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
