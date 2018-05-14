@@ -257,12 +257,12 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
-			case "areyoumymaster?","areyoumymaster": 
+			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
-			//case "areyoumymaster":
-				//message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
-				//break;
+			case "areyoumymaster":
+				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
+				break;
 			case "poem":
 				message.delete();
 				if(!args[1]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
