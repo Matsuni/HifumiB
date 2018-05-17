@@ -264,7 +264,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
 				} 
-				
+				while (total<100){
 				if (args[0] == (!isNaN)) {
 						n = args[0];
 						total = total + n;	
@@ -272,6 +272,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					if (total >= 100) {
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
 					}
+				}
 				break;
 			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
