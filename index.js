@@ -265,23 +265,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				} 
 				
-				if (args[0] == "Play") {
-					
-					message.channel.sendMessage("O-okay, start!");
-					while (total < 100) {
-						message.channel.sendMessage("It's your turn, Player " + player + "! The current total is "+ total + ".");
-						/*if(message.content.startsWith(!isNaN)){
-						n = Number(message.content);
-						if ((n>=1) && (n<=10)) {
-							total = total + n;
-							if (total < 100) {
-								if (player = 2) {player = 1;}
-								else {player = 2;}
-							}	
-						}
-						}
-						else {message.channel.sendMessage("T-that's not a valid number!");}
-					*/}
+				if (args[0] == !isNaN) {
+						n = args[0];
+						total = total + n;	
+					}
 					if (total >= 100) {
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
 					}
