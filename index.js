@@ -270,7 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
         					console.log(collector)
         					collector.on('collect', message => {
 						n = message.content;
-           					 if ((!isNan(n)) && (n=>1) && (n<=10)) {
+           					 if ((n=>1) && (n<=10)) {
                					 message.channel.send("No no");
            					 } else if (message.content == "100") {
                					 message.channel.send("Yes yes");
