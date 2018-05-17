@@ -269,7 +269,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
        						const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         					console.log(collector)
         					collector.on('collect', message => {
-						n = message.content
+						n = message.content;
            					 if ((!isNan(n)) && (n=>1) && (n<=10)) {
                					 message.channel.send("No no");
            					 } else if (message.content == "100") {
