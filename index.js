@@ -281,7 +281,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						}
 						}
 						else {message.channel.sendMessage("T-that's not a valid number!");}
-					}*/
+					*/}
 					if (total >= 100) {
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
 					}
