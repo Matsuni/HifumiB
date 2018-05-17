@@ -265,7 +265,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				} 
 				
-				if (args[0] == !isNaN) {
+				if (args[0] == (!isNaN)) {
 						n = args[0];
 						total = total + n;	
 					}
