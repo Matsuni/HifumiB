@@ -272,7 +272,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					if (total >= 100) {
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
 					}
-				}
 				break;
 			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
