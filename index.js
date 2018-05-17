@@ -84,7 +84,7 @@ var servers = {};
 
 bot.on("ready", function(message) {
 	console.log("Ready");
-	bot.user.setGame("my name jeff");
+	bot.user.setGame("H_Help for help");
 
 });
 
