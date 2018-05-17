@@ -38,18 +38,6 @@ var Dice = [
 	5,
 	6
 ];
-var Game = [
-	1,
-	2,
-	3,
-	4,
-	5,
-	6,
-	7,
-	8,
-	9,
-	10
-	];
 var Song = [
 	"*♪ Mankai STEP BY STEP de susume! STEP BY STEP, tobidase!~ ♪* (づ^□^)づ",
 	"*♪ Wuss poppin Jimbo!~ ♪* (づ^□^)づ",
@@ -271,6 +259,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "100game":
 				var player = 1;
 				var total = 0;
+				var n =0; 
 				if (!args[0]) {
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
@@ -280,7 +269,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
        						const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         					console.log(collector)
         					collector.on('collect', message => {
-           					 if (message.content == Game[Math.floor]) {
+						n = message.content
+           					 if ((!isNan(n)) && (n=>1) && (n<=10)) {
                					 message.channel.send("No no");
            					 } else if (message.content == "100") {
                					 message.channel.send("Yes yes");
