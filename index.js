@@ -265,17 +265,21 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				if (args[0] == "Play") {
-        		
+        				while(total <100){
+						message.channel.send("It's your turn Player"+player+"! Total:"+total+".")
        						const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         					console.log(collector)
         					collector.on('collect', message => {
 						n = message.content;
            					 if ((n=>1) && (n<=10)) {
-               					 message.channel.send("No no");
-           					 } else if (message.content == "100") {
-               					 message.channel.send("Yes yes");
+               					 	total=total + n
+							 if (player==2){player=1}
+							 else{player = 2}
+           					 } else if ((n<1) && (n>10)) {
+               					 message.channel.send("Invalid");
             						}
        						 })	
+					}
 				}
 				break;
 			case "areyoumymaster?": 
