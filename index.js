@@ -267,7 +267,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (args[0] == "Play") {
 					
 					message.channel.sendMessage("O-okay, start!");
-					while (total < 100) {
+					/*(while (total < 100) {
 						message.channel.sendMessage("It's your turn, Player " + player + "! The current total is "+ total + ".");
 						if(message.content.startsWith(!isNaN)){
 						n = Number(message.content);
@@ -283,7 +283,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					}
 					if (total >= 100) {
 						message.channel.sendMessage("C-congratulations, Player " + player + "! You won!");
-					}
+					}*/
 				}
 				break;
 			case "areyoumymaster?": 
