@@ -265,8 +265,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				if (args[0] == "Play") {
-
-        					message.author.send("Your turn");
+        		
        						const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         					console.log(collector)
         					collector.on('collect', message => {
@@ -276,6 +275,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
                					 message.channel.send("Yes yes");
             						}
        						 })	
+				}
 				break;
 			case "areyoumymaster?": 
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
