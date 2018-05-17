@@ -271,7 +271,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
         					collector.on('collect', message => {
            					 if (message.content == "100") {
                					 message.channel.send("No no");
-           					 } else if (message.content == "100") {
+           					 } else if (message.content == "10") {
                					 message.channel.send("Yes yes");
             						}
        						 })	
