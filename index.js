@@ -263,9 +263,19 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (!args[0]) {
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
-				} 
-				while (total<100){
-				if (args[0] == (!isNaN)) {
+				}
+				if (args[0] == "Play") {
+
+        					message.author.send("Your turn");
+       						const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        					console.log(collector)
+        					collector.on('collect', message => {
+           					 if (message.content == "100") {
+               					 message.channel.send("No no");
+           					 } else if (message.content == "100") {
+               					 message.channel.send("Yes yes");
+            						}
+       						 })
 						n = args[0];
 						total = total + n;	
 					}
