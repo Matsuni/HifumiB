@@ -289,7 +289,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
-           				 if ((n>=1) && (n<=10)) {
+           				 if ((n>=1) && (n<=100)) {
 						 n = Number(n);
 						 total=total + n;
 						 if (player == 2) {player = 1;}
