@@ -216,6 +216,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "didyoudoit?":
 				message.channel.send("Y-You know I had to... d-do it to them...", {file:"https://i.imgur.com/in3rt4J.png"});
 				break;
+			case "enough":
+				message.channel.send("a-aa....***AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!***");
+				break;
 			case "cute":
 				if (userData.level > 2) message.channel.send(" ", {file:Cute[Math.floor(Math.random() * Cute.length﻿)]});
 				else message.channel.sendMessage("I-I am sorry... You must be higher than level 2 for that command.");
