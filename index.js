@@ -88,7 +88,7 @@ var x = [
 	8,
 	9,
 	10
-	]
+	];
 var bot = new Discord.Client();
 var night = "0";
 
@@ -278,7 +278,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				if (args[0] == "Play") {
-					While(total < 100) {
 					message.channel.send("It's your turn Player"+player+"! Total:"+total+".")
        					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         				console.log(collector)
@@ -301,7 +300,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						}
        						 })	
 						
-					}
 				}
 				break;
 			case "areyoumymaster?": 
