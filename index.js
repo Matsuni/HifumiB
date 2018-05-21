@@ -45,6 +45,7 @@ var Song = [
 	"*♪ It's everyday bro! ~ ♪*(づ^□^)づ"
 	"*♪ Gucci Gang Gucci Gang Gucci Gang Gucci Gang Gucci Gang ~ ♪*(づ^□^)づ"
 	"*♪ Step on up to plaaate, 'cause this ain't no game. It's time to make history yeeeeeaaahh ~ ♪*(づ^□^)づ"
+	"*♪ So can you feel the jazz? Of the beautiful ballad. How about tengo or maybe some rock'n'roll ~ ♪*(づ^□^)づ"
 ];
 var Master = [
 	"Y-Yes!",
