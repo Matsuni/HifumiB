@@ -290,10 +290,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
         				collector.on('collect', message => {
 					n = message.content;
            				 if ((n>=1) && (n<=10)) {
-						 while (i =! n){
-							i = X[Math.floor(Math.	random() * X.length﻿)];
-						 	}
-						 total=total + i;
+						 parseInt(n);
+						 total=total + n;
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
 							message.channel.send("Total:"+total);
