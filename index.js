@@ -277,6 +277,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 							message.channel.send("Total:"+total);
            					 } else{
                					 message.channel.send("Invalid");
+							 return;
             						}
        						 })	
 						
