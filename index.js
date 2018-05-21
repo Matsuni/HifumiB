@@ -278,7 +278,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				var player = 1;
 				var total = 0;
 				var n =0;
-				var i = 0;
 				if (!args[0]) {
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
@@ -295,7 +294,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
 							message.channel.send("Total:"+total);
-						 return;
            					 } else{
                						 message.channel.send("Invalid");
 							 return;
