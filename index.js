@@ -43,6 +43,8 @@ var Song = [
 	"*♪ Wuss poppin Jimbo!~ ♪* (づ^□^)づ",
 	"*♪ Hashire sori yo, kaze no you ni, Tsukimihara wo padoru padoru ~ ♪*(づ^□^)づ",
 	"*♪ It's everyday bro! ~ ♪*(づ^□^)づ"
+	"*♪ Gucci Gang Gucci Gang Gucci Gang Gucci Gang Gucci Gang ~ ♪*(づ^□^)づ"
+	"*♪ Step on up to plaaate, 'cause this ain't no game. It's time to make history yeeeeeaaahh ~ ♪*(づ^□^)づ"
 ];
 var Master = [
 	"Y-Yes!",
