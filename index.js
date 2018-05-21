@@ -77,6 +77,18 @@ var Cute = [
 	"https://i.imgur.com/FfaVKkg.jpg",
 	"https://i.imgur.com/xjcz3di.png"
 ];
+var x = [
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10
+	]
 var bot = new Discord.Client();
 var night = "0";
 
@@ -259,22 +271,27 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "100game":
 				var player = 1;
 				var total = 0;
-				var n =0; 
+				var n =0;
+				var i = 0;
 				if (!args[0]) {
 					message.channel.sendMessage("A-alright, here are the rules: each player will say a number from 1 to 10 in turns, and the numbers will add up. The first one to reach 100 wins!");
 					return;
 				}
 				if (args[0] == "Play") {
+					While(total < 100) {
 					message.channel.send("It's your turn Player"+player+"! Total:"+total+".")
        					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
            				 if ((n>=1) && (n<=10)) {
-						 total=total + n;
+						 while (i =! n){
+							i = Dice[Math.floor(Math.	random() * x.length﻿)]; }
+						 total=total + i;
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
 							message.channel.send("Total:"+total);
+						 return;
            					 } else{
                						 message.channel.send("Invalid");
 							 return;
@@ -284,7 +301,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						}
        						 })	
 						
-					
+					}
 				}
 				break;
 			case "areyoumymaster?": 
