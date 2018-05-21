@@ -77,7 +77,7 @@ var Cute = [
 	"https://i.imgur.com/FfaVKkg.jpg",
 	"https://i.imgur.com/xjcz3di.png"
 ];
-var x = [
+var X = [
 	1,
 	2,
 	3,
@@ -285,7 +285,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					n = message.content;
            				 if ((n>=1) && (n<=10)) {
 						 while (i =! n){
-							i = Dice[Math.floor(Math.	random() * x.length﻿)]; }
+							i = X[Math.floor(Math.	random() * X.length﻿)]; }
 						 total=total + i;
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
