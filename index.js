@@ -285,7 +285,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					n = message.content;
            				 if ((n>=1) && (n<=10)) {
 						 while (i =! n){
-							i = X[Math.floor(Math.	random() * X.length﻿)]; }
+							i = X[Math.floor(Math.	random() * X.length﻿)];
+						 	}
 						 total=total + i;
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
