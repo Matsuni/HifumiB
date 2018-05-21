@@ -270,7 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
-           				 if ((n=>1) && (n<=10)) {
+           				 if ((n>=1) && (n<=10)) {
 						 total=total + n;
 						 if (player == 2) {player = 1;}
 						 else{player = 2;}
@@ -279,7 +279,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
                						 message.channel.send("Invalid");
 							 return;
             						}
-						if(total => 100){
+						if(total >= 100){
 						message.channel.send("Player "+player+" wins!");
 						}
        						 })	
