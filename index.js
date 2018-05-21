@@ -293,7 +293,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "poem":
 				message.delete();
-				if(!args[1]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
+				if(!args[5]) {// aqui vamos verificar se existe mais que uma palavra no poema ex: H_Poem Nibba(args[0]) Boi(args[1]) 
 					message.channel.sendMessage("P-Please, send me a poem and I will save it in the chat...!");
 					return;
 				}
