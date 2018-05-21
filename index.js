@@ -206,7 +206,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "cute":
 				if (userData.level > 2) message.channel.send(" ", {file:Cute[Math.floor(Math.random() * Cute.length﻿)]});
-				else message.channel.sendMessage("I-I am sorry... I can't do that right now...");
+				else message.channel.sendMessage("I-I am sorry... You must be higher than level 2 for that command.");
 				break;
 			case "smile":
 				message.channel.send("I-I-I'll p-pay y-y-you...d-don't m-make me do t-this...! (ᗒ﹏ᗕ)", {file:﻿"https://pbs.twimg.com/media/CnMW3h0XYAA2V9D.jpg"});
@@ -217,7 +217,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "sing":
 				if (userData.level > 1) message.channel.sendMessage(Song[Math.floor(Math.random() * Song.length﻿)]);
-				else message.channel.sendMessage("I-I am sorry... I can't do that right now...");
+				else message.channel.sendMessage("I-I am sorry... You must be higher than level 1 for that command.");
 				break;
 			case "mylevel":
 				userData.points= userData.points - 1;
