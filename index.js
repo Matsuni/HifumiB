@@ -28,6 +28,9 @@ var Ball = [
 	"M-Maybe! ¯ \\\ _ (ツ) _ / ¯",
 	"O-OF COURSE!",
 	"N-NO! NO!",
+	"I d-don't know...",
+	"Most l-likely",
+	"I'm n-not sure...",
 	"P-Please ask again..."
 ];
 var Dice = [
