@@ -277,7 +277,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				if (args[0] == "Play") {
-       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+					message.channel.send("It's your turn Player"+player+"! Total:"+total+".");
+       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 180000 });
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
@@ -297,6 +298,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						}
 					
 						
+				}
+				if (args[0] == "Stop"){
+					message.channel.send("The game has ended. Total: "+total+".");
 				}
 				break;
 			case "areyoumymaster?": 
