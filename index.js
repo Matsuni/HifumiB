@@ -353,7 +353,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (new Date().getHours() < 18) {
     					message.channel.send("G-Goodni--- wait...");
 					}
-				else{ message.channel.send("G-Goodnight!");
+				else{ message.channel.send("G-Goodnight!");}
 				break;
 			case "play":
 				if(!args[1]) {
