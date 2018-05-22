@@ -179,11 +179,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.author.sendEmbed(embed);
 				break;//depois de terminar uma função colocamos sempre o break para que este pare
 			case "hi":
-				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
-				break;
 			case "hello":
-				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
-				break;
 			case "howdy":
 				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
 				break;
@@ -195,8 +191,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendMessage(jojo[Math.floor(Math.random() * jojo.length﻿)]);
 				break;
 			case "thanks":
-				message.channel.sendMessage("Y-Y-YOU'RE.. welcome (づ｡◕‿‿◕｡)づ");
-				break;
 			case "thankYou":
 				message.channel.sendMessage("Y-Y-YOU'RE.. welcome (づ｡◕‿‿◕｡)づ");
 				break;
@@ -306,8 +300,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				break;
 			case "areyoumymaster?": 
-				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
-				break;
 			case "areyoumymaster":
 				message.channel.sendMessage(Master[Math.floor(Math.random() * Master.length﻿)]);
 				break;
