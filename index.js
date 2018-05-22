@@ -152,10 +152,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.delete();
 				message.author.sendMessage("I-I am here to help you!!");//message.author.sendMessage = O bot vai enviar uma mensagem privada para o autor da mensagem 
 				var embed = new Discord.RichEmbed()
-					.addField("H_Hi", "I say Hi!")//O addField permite que adicionemos um titulo e descrição ex: add.Field("Titulo","Descrição")
+					.addField("H_Hi|H_Hello|H_Howdy", "I say Hi!")//O addField permite que adicionemos um titulo e descrição ex: add.Field("Titulo","Descrição")
 					.addField("H_Goodnight", "I say Goodnight!")
 					.addField("H_JojoReference", "Random Jojo Reference")
-					.addField("H_Thanks OR H_ThankYou", "You are welcome")
+					.addField("H_Thanks|H_ThankYou", "You are welcome")
 					.addField("H_Sorry", "No problem")
 					.addField("H_NoticeMe", "I'll notice you")
 					.addField("H_SendNudes", "NO!!")
