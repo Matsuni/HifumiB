@@ -285,22 +285,24 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
            				if ((n>=1) && (n<=100)) {
 						n = Number(n);
 						total=total + n;
-						if (player == 2) {player = 1;}
-						else{player = 2;}
-							message.channel.send("It's your turn Player"+player+"! Total:"+total+".");
            					} else{
                						message.channel.send("Invalid");
 							return;
 							}
-       						})
-					if(total >= 100){
-						message.channel.send("Player "+player+" wins!");
+						if (player == 2) {
+							player = 1; 
+							message.channel.send("It's your turn Player 1! Total:"+total+".");}
+						else{
+							player = 2; 
+							message.channel.send("It's your turn Player 2! Total:"+total+".");}
+						if(total >= 100){
+							message.channel.send("Player "+player+" wins!");
 						}
-					
+       						})
 						
 				}
 				if (args[0] == "Stop"){
-					message.channel.send("The game has ended. Total: "+total+".");
+					message.channel.send("The game has ended.");
 				}
 				break;
 			case "areyoumymaster?": 
