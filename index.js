@@ -349,6 +349,11 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.delete();
 				message.channel.send({file:﻿"https://i.imgur.com/DdYo9Lq.jpg"});
 				break;
+			case "Goodnight":
+				if (new Date().getHours() < 18) {
+    					message.channel.send("G-Goodni--- wait...");
+					}
+				else{ message.channel.send("G-Goodnight!");
 			case "play":
 				if(!args[1]) {
 					message.channel.sendMessage("I-I need a link... please...!");
@@ -384,7 +389,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			default://isto é se caso nenhum dos cases for ativado
 				userData.points= userData.points - 1;
-				message.channel.sendMessage("I-I'm sorry! I-I DON'T UNDERSTAND!!");
+				message.channel.sendMessage("I-I'm sorry but that command is i-invalid!");
 	}
 	  
 	 
