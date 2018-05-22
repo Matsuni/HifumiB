@@ -171,10 +171,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_Poem", "Write a poem and I'll post it in the chat!")
 					.addField("H_Vs", "Please don't fight!")	
 					.addField("H_MyLevel", "I'll tell your current HifumiLevel and HifumiPoints!")
-					.addField("H_Play", "Give me the link of a video and the auido from it will play!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("H_Skip", "I'll skip to the next audio!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("H_Stop", "I'll stop all audio!(It's not fully codded yet, but you can try it if you wish...)")
-					.addField("H_NightMode", "Activate/Deactivate my night mode!")
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.author.sendEmbed(embed);
