@@ -183,10 +183,6 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "howdy":
 				message.channel.sendMessage("H-H-Hello!! (づ｡◕‿‿◕｡)づ");//message.channel.sendMessage = Queremos enviar uma mensagem de onde o bot foi chamado
 				break;
-			case "goodnight":
-				if (night == "1") message.channel.sendMessage("G-Goodnight (~˘▾˘)~");
-				else message.channel.sendMessage( "I-Isn't it a little early for that?");
-				break;
 			case "jojoreference":
 				message.channel.sendMessage(jojo[Math.floor(Math.random() * jojo.length﻿)]);
 				break;
@@ -360,9 +356,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "Goodnight":
 				if (new Date().getHours() < 18) {
-    					message.channel.send("G-Goodni--- wait...");
+    					message.channel.send( "I-Isn't it a little early for that?");
 					}
-				else{ message.channel.send("G-Goodnight!");}
+				else{ message.channel.send("G-Goodnight (~˘▾˘)~");}
 				break;
 			case "play":
 				if(!args[1]) {
