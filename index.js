@@ -356,7 +356,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					}
 				else{ message.channel.send("G-Goodnight (~˘▾˘)~");}
 				break;
-			case "profpic":
+			case "pic":
 				message.channel.send(message.author.avatarURL);
 				break;
 			case "play":
