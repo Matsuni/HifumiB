@@ -273,31 +273,14 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				if (args[0] == "Play") {
-					message.channel.send("It's your turn Player 1! Total:"+total+".");
-       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 180000 });
-        				console.log(collector)
-        				collector.on('collect', message => {
-					n = message.content;
-					n = Number(n);
-           				if ((n>=1) && (n<=100)) {
-						total=total + n;
-           					} else{
-               						message.channel.send("Invalid");
-							return;
-							}
-						if(total >= 100){
-							message.channel.send("Player "+player+" wins!");
-							return;
-						}
-						if (player == 2) {
-							player = 1; 
-							message.channel.send("It's your turn Player 1! Total:"+total+".");}
-						else{
-							player = 2; 
-							message.channel.send("It's your turn Player 2! Total:"+total+".");}
-       						})
+					async (bot, message, args) => {
+					await message.channel.send("It's your turn Player 1! Total:"+total+".");
+       					const msg = await message.channel.awaitMessages(msg => {
+        				console.log(msg.content);
+						n = message.content;
+					}, {time:1100});
 					
-						
+       					message.channe.send("Await completed!");
 				}
 				if (args[0] == "Stop"){
 					message.channel.send("The game has ended.");
