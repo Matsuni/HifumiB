@@ -265,6 +265,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else message.channel.sendMessage("Y-You need to type Play...!");
 				break;
 			case "100game":
+				var total = 0;
+				var n = 0;
+				var player = 0;
 				if (args[0] == "Play") {
 					message.channel.send("It's your turn Player 1! Total:"+total+".");
        					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 180000 });
