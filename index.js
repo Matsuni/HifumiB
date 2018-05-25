@@ -282,6 +282,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					
        					message.channe.send("Await completed!");
 				}
+				}
 				if (args[0] == "Stop"){
 					message.channel.send("The game has ended.");
 					return;
