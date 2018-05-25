@@ -283,7 +283,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 							}
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
-							return;
+							break;
 						}
 						if (player == 2) {
 							player = 1; 
