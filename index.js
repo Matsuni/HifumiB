@@ -363,7 +363,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					message.channel.send("Y-You need to give me a member...");
 					return;
 				}
-				if (args[0] !== member){
+				if (!member){
 					message.channel.send("T-That member... d-doesn't exist...");
 					return;
 				}
