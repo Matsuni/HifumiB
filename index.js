@@ -359,10 +359,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else{ message.channel.send("G-Goodnight (~˘▾˘)~");}
 				break;
 			case "pic":
-				if (!args[1]){
+				if (!args[0]){
 					message.channel.send(message.author.avatarURL);
 				}
-				if (args[1] == member){
+				if (args[0] == member){
 					message.channel.send(member.user.avatarURL);
 				}
 				break;
