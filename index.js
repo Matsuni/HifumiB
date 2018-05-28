@@ -147,6 +147,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
   });//este é um codigo de pontos que encontrei... "WHO DID THIS"
 		
 	let member = message.mentions.members.first();
+	let role = message.guild.roles.find("name", "Biggest Nigga");
 	
 	switch (command.toLowerCase()){//aqui começamos um case que em java é Switch
 			
@@ -235,7 +236,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				var embed = new Discord.RichEmbed()
 					.addField("Level: ", userData.level)
 					.addField("HifumiPoints: ", userData.points)
-					.addField("Role: ", message.member.roles.some(r=>["Biggest Nigga", "Weeaboo Cage", "Nero Butler", "Proficient"].includes(r.name)))
+					.addField("Role: ", message.member.roles.has(role.id))
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.channel.sendEmbed(embed);
