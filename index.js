@@ -237,7 +237,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("HifumiPoints: ", userData.points)
 					.addField("Role: ", message.member.roles)
 					.setColor(132344)
-					.setThumbnail(message.author.avatarURL)
+					.setThumbnail(message.guild.roles.get.members.map)
 				message.channel.sendEmbed(embed);
 				break;
 			case "rolldice":
