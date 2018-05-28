@@ -357,7 +357,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else{ message.channel.send("G-Goodnight (~˘▾˘)~");}
 				break;
 			case "pic":
+				if (!args[1]){
 				message.channel.send(message.author.avatarURL);
+				}
 				break;
 			case "play":
 				if(!args[1]) {
