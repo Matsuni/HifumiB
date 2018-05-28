@@ -250,7 +250,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					message.channel.sendMessage("I-In this game both of us will roll a-a dice 3 times... and then... O-OH! And then we sum the numbers and the greatest number wins...! To start type !HRollDice Play... good luck!");
 					return;
 				}
-				if (args[0] == "Play") {
+				if (args[0] == command.toLowerCase()"Play") {
 					while (x < 3){
 					i = Dice[Math.floor(Math.	random() * Dice.length﻿)];
 					message.channel.sendMessage(message.author.toString()+": "+i);
