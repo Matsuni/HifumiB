@@ -168,7 +168,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField("H_Delet", "Politely ask someone to delete their message!")
 					.addField("H_Reverse", "Use this when someone tries to roast you!")
 					.addField("H_Cute", "I'll post a cute image of me! (You need to be lvl 3 to ask for this command!)")
-					.addField("H_pic","Post the profile picture from a member.")
+					.addField("H_Pic","Post the profile picture from a member.")
 					.addField("H_DidYouDoIt?", "Just a meme...")
 					.addField("H_8ball", "Only questions that I can answer with Yes or No.")
 					.addField("H_Sing", "I'll sing a song! (You need to be lvl 2 to ask for this command!) ")
@@ -207,7 +207,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.channel.sendMessage("***N-N-N-NO!! T-THAT'S LEWD!! O///O ***");
 				break;
 			case "omaewamoushindeiru":
-				message.channel.sendMessage("...eh...y-you mean---N-***NANI!!***");
+				message.channel.sendMessage("...eh...---N-***NANI!!***");
 				break;
 			case "didyoudoit?":
 				message.channel.send("Y-You know I had to... d-do it to them...", {file:"https://i.imgur.com/in3rt4J.png"});
