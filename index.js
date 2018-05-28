@@ -362,8 +362,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (!args[1]){
 					message.channel.send(message.author.avatarURL);
 				}
-				if (member){
-					message.channel.send(message.member.avatarURL);
+				if (args[1] == member){
+					message.channel.send(member.user.avatarURL);
 				}
 				break;
 			case "play":
