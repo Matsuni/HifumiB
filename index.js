@@ -146,6 +146,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
     if (err) console.error(err)
   });//este é um codigo de pontos que encontrei... "WHO DID THIS"
 		
+	let member = message.mentions.members.first();
+	
 	switch (command.toLowerCase()){//aqui começamos um case que em java é Switch
 			
 			case "help"://Agora o bot vai verificar qual é a palavra que vem logo depois do Prefix e executar a sua função
@@ -358,7 +360,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "pic":
 				if (!args[1]){
-				message.channel.send(message.author.avatarURL);
+					message.channel.send(message.author.avatarURL);
+				}
+				if (args[1] == member){
+					message.channel.send(message.member.avatarURL);
 				}
 				break;
 			case "play":
