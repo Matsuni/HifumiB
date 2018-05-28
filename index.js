@@ -234,13 +234,13 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "mylevel":
 				var per;
 				userData.points= userData.points - 1;
-				var embed = new Discord.RichEmbed()
 				if (message.author.permissions.has('ADMINISTRATOR')){
 					per = "Is an admin"
 				}
 				else{
 					per = "Is a member"
 				}
+				var embed = new Discord.RichEmbed()
 					.addField("Level: ", userData.level)
 					.addField("HifumiPoints: ", userData.points)
 					.addField("Role: ", per)
