@@ -232,11 +232,18 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else message.channel.sendMessage("I-I am sorry... You must be higher than level 1 for that command.");
 				break;
 			case "mylevel":
+				var per;
 				userData.points= userData.points - 1;
 				var embed = new Discord.RichEmbed()
+				if (message.author.permissions.has('ADMINISTRATOR')){
+					per = "Is an admin"
+				}
+				else{
+					per = "Is a member"
+				}
 					.addField("Level: ", userData.level)
 					.addField("HifumiPoints: ", userData.points)
-					.addField("Role: ", message.author.roles.has(role.name))
+					.addField("Role: ", per)
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.channel.sendEmbed(embed);
