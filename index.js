@@ -362,7 +362,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				if (!args[1]){
 					message.channel.send(message.author.avatarURL);
 				}
-				if (args[1] == member){
+				if (member){
 					message.channel.send(message.member.avatarURL);
 				}
 				break;
