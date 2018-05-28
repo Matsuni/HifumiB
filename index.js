@@ -235,9 +235,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				var embed = new Discord.RichEmbed()
 					.addField("Level: ", userData.level)
 					.addField("HifumiPoints: ", userData.points)
-					.addField("Role: ", message.member.roles)
+					.addField("Role: ", message.guild.roles.get.members.map)
 					.setColor(132344)
-					.setThumbnail(message.guild.roles.get.members.map)
+					.setThumbnail(message.author.avatarURL)
 				message.channel.sendEmbed(embed);
 				break;
 			case "rolldice":
