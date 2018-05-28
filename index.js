@@ -235,7 +235,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				var embed = new Discord.RichEmbed()
 					.addField("Level: ", userData.level)
 					.addField("HifumiPoints: ", userData.points)
-					.addField("Role: ", message.member.roles.has(role.id))
+					.addField("Role: ", message.member.roles.some(r=>["Biggest Nigga", "Weeaboo Cage", "Nero Butler", "Proficient"].includes(r.name)))
 					.setColor(132344)
 					.setThumbnail(message.author.avatarURL)
 				message.channel.sendEmbed(embed);
