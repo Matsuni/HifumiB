@@ -360,7 +360,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "pic":
 				if (!args[0]){
-					message.channel.send(message.author.avatarURL);
+					message.channel.send("Y-You need to give me a member...");
+				}
+				if (args[0] != member){
+					message.channel.send("T-That member... d-doesn't exist...");
 				}
 				if (args[0] == member){
 					message.channel.send(member.user.avatarURL);
