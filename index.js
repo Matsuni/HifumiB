@@ -155,8 +155,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.author.sendMessage("I-I am here to help you!!");//message.author.sendMessage = O bot vai enviar uma mensagem privada para o autor da mensagem 
 				var embed = new Discord.RichEmbed()
 					.addField("Greetings", "H_Hi|H_Hello|H_Howdy!H_Goodnight")//O addField permite que adicionemos um titulo e descrição ex: add.Field("Titulo","Descrição")
-					.addField("Intereactions", "H_Thanks|H_ThankYou|H_Sorry|H_NoticeMe|H_JojoReference|H_SendNudes|H_OmaeWaMouShindeiru|H_Enough|H_AobaIsTrash|H_Cute|H_DidYouDoIt?|H_Sing|H_AreYouMyMaster?|H_Cute")
-					.addField("Interactio with other members", "H_Pat|H_Delet|H_Reverse|H_Vs|H_Pic")
+					.addField("Interactions", "H_Thanks|H_ThankYou|H_Sorry|H_NoticeMe|H_JojoReference|H_SendNudes|H_OmaeWaMouShindeiru|H_Enough|H_AobaIsTrash|H_Cute|H_DidYouDoIt?|H_Sing|H_AreYouMyMaster?|H_Cute")
+					.addField("Interacting with other members", "H_Pat|H_Delet|H_Reverse|H_Vs|H_Pic")
 					.addField("Games", "H_8ball|H_RollDice|H_Poem")
 					.addField("Other", "H_MyLevel")
 					.setColor(132344)
