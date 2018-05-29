@@ -253,10 +253,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "100game":
 				var total = 0;
 				var n = 0;
-				var player = 0;
+				var player = 1;
 				if (args[0] == "Play") {
 					message.channel.send("It's your turn Player 1! Total:"+total+".");
-       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 100 });
+       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 1000 });
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
@@ -270,6 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
+							collector.time: 0;
 							return;
 						}
 						if (player == 2) {
@@ -279,6 +280,9 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 							player = 2; 
 							message.channel.send("It's your turn Player 2! Total:"+total+".");}
 						})
+					if(total !== 100){
+						message.channel.send("The time is up. Player "+player+" wins.");
+					}
 					
 						
 				}
