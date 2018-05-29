@@ -270,7 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
-							console.log(collector.time = 0)
+							collector.time = 0
 							return;
 						}
 						if (player == 2) {
@@ -285,7 +285,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				if (args[0] == "Stop"){
 					message.channel.send("The game has ended.");
-					console.log(collector.time = 0)
+					collector.time = 0
 					return;
 				}
 				break;
