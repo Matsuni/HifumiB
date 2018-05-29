@@ -270,7 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
-							collector.time: 0;
+							collector.time = 0;
 							return;
 						}
 						if (player == 2) {
