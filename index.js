@@ -256,7 +256,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				var player = 1;
 				if (args[0] == "Play") {
 					message.channel.send("It's your turn Player 1! Total:"+total+".");
-       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+       					const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 19000 });
         				console.log(collector)
         				collector.on('collect', message => {
 					n = message.content;
@@ -270,7 +270,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
-							collector.time = 0;
+							console.log(collector.time = 0)
 							return;
 						}
 						if (player == 2) {
@@ -285,6 +285,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				}
 				if (args[0] == "Stop"){
 					message.channel.send("The game has ended.");
+					console.log(collector.time = 0)
 					return;
 				}
 				break;
