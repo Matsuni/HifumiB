@@ -267,7 +267,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
                						message.channel.send("Invalid");
 							return;
 							}
-					})
+					
 						if(total >= 100){
 							message.channel.send("Player "+player+" wins!");
 							return;
@@ -278,6 +278,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 						else{
 							player = 2; 
 							message.channel.send("It's your turn Player 2! Total:"+total+".");}
+						})
 					
 						
 				}
