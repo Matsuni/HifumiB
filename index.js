@@ -300,8 +300,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					return;
 				}
 				var embed = new Discord.RichEmbed()
-					.addField("Poem time", "Poem by:"+message.author.toString() )
-					.setDescription(args.join(" "))//Aqui vamos juntar todos os args[] e separalos por um espaço
+					.addField("Poem time", args.join(" ") )
+					.setDescription("Poem by:"+message.author.toString())//Aqui vamos juntar todos os args[] e separalos por um espaço
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				break;
