@@ -348,7 +348,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.delete();
 				var embed = new Discord.RichEmbed()
 					.setDescription(message.author.toString() + " is shocked.")
-					.addField({file:﻿"https://i.pinimg.com/originals/d3/d2/02/d3d202c451b013f2f7cb40aa67d3a4ba.gif"})//Aqui vamos juntar todos os args[] e separalos por um espaço
+					.setDescription({file:﻿"https://i.pinimg.com/originals/d3/d2/02/d3d202c451b013f2f7cb40aa67d3a4ba.gif"})//Aqui vamos juntar todos os args[] e separalos por um espaço
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
 				break;
