@@ -202,7 +202,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				else message.channel.sendMessage("I-I am sorry... You must be higher than level 2 for that command.");
 				break;
 			case "smile":
-				message.channel.send("I-I-I'll p-pay y-y-you...d-don't m-make me do t-this...! (ᗒ﹏ᗕ)", {file:﻿"https://pbs.twimg.com/media/CnMW3h0XYAA2V9D.jpg"});
+				message.channel.send("I-I-I'll p-pay y-y-you...d-don't m-make me do t-this...! (ᗒ﹏ᗕ)", {file:﻿"http://66.media.tumblr.com/821940c10917a8bbcfa082fea409d77e/tumblr_oa65uwgXXG1rbnx7io2_500.gif"});
 				break;
 			case "8ball":
 				if (args[1]) message.channel.sendMessage(Ball[Math.floor(Math.random() * Ball.length﻿)]);//Aqui esta a função do random
