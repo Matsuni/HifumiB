@@ -351,6 +351,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					.addField( {file:﻿"https://steamusercontent-a.akamaihd.net/ugc/108479918424291810/26D554D557C2A02C147576E2408552784B9D936A/")
 					.setColor(132344)
 				message.channel.sendEmbed(embed);
+				break;
 			case "Goodnight":
 				if (new Date().getHours() < 18) {
     					message.channel.send( "I-Isn't it a little early for that?");
