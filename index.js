@@ -309,6 +309,10 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 					message.channel.sendMessage("P-Please, tell who you wish to fight! ...i-i don't like fighting...");
 					return;
 				}
+				if (!member){
+					message.channel.send("T-That member... d-doesn't exist...");
+					return;
+				}
 				var vs = [
 					message.author.toString(),
 					args[0]
