@@ -347,7 +347,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "shock":
 				message.delete();
 				message.channel.send(message.author.toString() + " is shocked.");
-				message.channel.send({file:﻿"https://steamusercontent-a.akamaihd.net/ugc/108479918424291810/26D554D557C2A02C147576E2408552784B9D936A/"});
+				message.channel.send({file:﻿"https://i.pinimg.com/originals/d3/d2/02/d3d202c451b013f2f7cb40aa67d3a4ba.gif"});
 				break;
 			case "Goodnight":
 				if (new Date().getHours() < 18) {
