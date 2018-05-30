@@ -344,6 +344,13 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.delete();
 				message.channel.send({file:﻿"https://i.imgur.com/DdYo9Lq.jpg"});
 				break;
+			case "shock":
+				message.delete();
+				var embed = new Discord.RichEmbed()
+					.setDescription(message.author.toString() + " is shocked.")
+					.addField( {file:﻿"https://steamusercontent-a.akamaihd.net/ugc/108479918424291810/26D554D557C2A02C147576E2408552784B9D936A/")
+					.setColor(132344)
+				message.channel.sendEmbed(embed);
 			case "Goodnight":
 				if (new Date().getHours() < 18) {
     					message.channel.send( "I-Isn't it a little early for that?");
