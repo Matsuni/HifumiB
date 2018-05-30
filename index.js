@@ -346,7 +346,8 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				break;
 			case "shock":
 				message.delete();
-				message.channel.send(message.author.toString() + " is shocked.", {file:﻿"https://steamusercontent-a.akamaihd.net/ugc/108479918424291810/26D554D557C2A02C147576E2408552784B9D936A/"});
+				message.channel.send(message.author.toString() + " is shocked.");
+				message.channel.send({file:﻿"https://steamusercontent-a.akamaihd.net/ugc/108479918424291810/26D554D557C2A02C147576E2408552784B9D936A/"});
 				break;
 			case "Goodnight":
 				if (new Date().getHours() < 18) {
