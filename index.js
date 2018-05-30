@@ -327,7 +327,7 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 			case "pat": 
 				message.delete();
 				args[0] = message.guild.member(message.mentions.users.first()); 
-				if (args[0]) message.channel.send(args[0] + " gets a comfy pat!", {file:﻿"https://images5.alphacoders.com/837/837553.png"});
+				if (args[0]) message.channel.send(args[0] + " gets a comfy pat!", {file:﻿"https://img.gifmagazine.net/gifmagazine/images/973513/original.gif"});
 				else{ 
 					message.channel.send("Y-You need to tell me who to pat!");
 					userData.points= userData.points - 1;
