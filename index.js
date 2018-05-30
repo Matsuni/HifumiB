@@ -344,14 +344,14 @@ bot.on("message", function(message) {//Aqui é que o bot começa a trabalhar com
 				message.delete();
 				message.channel.send({file:﻿"https://i.imgur.com/DdYo9Lq.jpg"});
 				break;
-			case "shock":
+			case "shocked":
 				message.delete();
 				message.channel.send(message.author.toString() + " is shocked.");
 				message.channel.send({file:﻿"https://i.pinimg.com/originals/d3/d2/02/d3d202c451b013f2f7cb40aa67d3a4ba.gif"});
 				break;
 			case "scared":
 				message.delete();
-				message.channel.send(message.author.toString() + "is scared.");
+				message.channel.send(message.author.toString() + " is scared.");
 				message.channel.send({file:"https://media1.tenor.com/images/dc76cf1c8ebdfe45fb23a23145b33e35/tenor.gif?itemid=9095153"});
 				break;
 			case "Goodnight":
